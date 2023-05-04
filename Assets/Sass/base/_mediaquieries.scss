@@ -1,0 +1,27 @@
+/* Dispositivos pequeños (tablets verticales y teléfonos grandes, 600px y más) */ 
+@mixin small {
+    @media only screen and (min-width: 600px) {
+        @content;
+    } 
+}
+
+/* Dispositivos medianos (tablets horizontales, 768px y más) */ 
+@mixin medium {
+    @media only screen and (min-width: 768px) {
+        @content;
+    } 
+}
+
+/* Dispositivos grandes (computadores portátiles/de escritorio, 992px y más) */
+@mixin large {
+    @media only screen and (min-width: 992px) {
+        @content;
+    } 
+}
+
+/* Dispositivos extra grandes (grandes computadores portátiles y de escritorio, 1200px y más) */ 
+@mixin xlarge {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}

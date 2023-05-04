@@ -1,0 +1,41 @@
+.navigation {
+    display: none;
+    background-color: $colorNav;
+    @include xlarge {
+        display: flex;
+    }
+    @include large {
+        display: flex;
+    }
+    @include medium {
+        display: flex;
+    }
+}
+.navigation__div1 {
+    display: flex;
+    flex: 30%;
+    justify-content: center;
+    align-items: center;
+    img {
+        padding: 1%;
+    }
+}
+.navigation__div2 {
+    display: flex;
+    flex: 70%;
+}
+.divnav__list {
+    display: flex;
+    justify-content: space-around;
+    flex: 100%;
+    align-items: center;
+}
+.navList__item {
+    list-style: none;
+}
+.navList__link {
+    text-decoration: none;
+    font-size: $tamañoLinksNav;
+    color: $colorLinksNav;
+    font-weight: bold;
+}

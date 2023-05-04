@@ -1,0 +1,21 @@
+.boton {
+    background-color: $colorBgBoton;
+    border: 2px solid $colorNav;
+    border-radius: 5px;
+    padding: 5px;
+    color: $colorLetraBtn;
+    font-weight: bold;
+    cursor: pointer;
+}
+#btn__volver {
+    margin: 10px;
+    @include xlarge {
+        display: none;
+    }
+    @include large {
+        display: none;
+    }
+    @include medium {
+        display: none;
+    }
+}

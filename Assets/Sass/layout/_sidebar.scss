@@ -1,0 +1,61 @@
+.sidebar {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    @include xlarge {
+        display: flex;
+        flex: 40%;
+        border-right: 1px solid black;
+    }
+    @include large {
+        display: flex;
+        flex: 40%;
+        border-right: 1px solid black;
+    }
+    @include medium {
+        display: flex;
+        flex: 40%;
+        border-right: 1px solid black;
+    }
+}
+.mostrar {
+    display: flex;
+}
+.search-bar {
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include medium {
+        padding: 15px;
+    }
+}
+.chats {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    padding: 2%;
+    align-items: center;
+    cursor: pointer;
+}
+#ultimo-chat {
+    border-bottom: none;
+}
+.foto-chat {
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 4%;
+}
+.nombre-chat {
+    color: rgb(27, 27, 116);
+    font-size: 18px;
+    margin-right: 2%;
+}
+.chats__nombre--bold {
+    font-weight: bolder;
+}
+.fecha-chat {
+    font-size: 12px;
+}

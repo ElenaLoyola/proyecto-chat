@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="icon" href="Assets\Img\icon2.png">
+    <link rel="stylesheet" href="Assets\CSS\main.css">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="navigation__div1">
+            <img class="navigation__img" src="Assets\Img\logo-nav.png" width="40" alt="logo chat">
+            <h1 class="navigation__titulo">Chat Empresarial</h1>
+        </div>
+        <div class="navigation__div2">
+            <ul class="divnav__list">
+                <li class="navList__item"><a class="navList__link" href="#">Inicio</a></li>
+                <li class="navList__item"><a class="navList__link" href="#">FAQ</a></li>
+                <li class="navList__item"><a class="navList__link" href="#">Manuales y tutoriales</a></li>
+                <li class="navList__item"><a class="navList__link" href="#">Noticias</a></li>
+                <li class="navList__item"><a class="navList__link" href="#">Calendario</a></li>
+                <li class="navList__item"><a class="navList__link" href="#">Perfil</a></li>
+                <li class="navList__item"><a class="navList__link" href="#">Organigrama</a></li>
+            </ul>
+        </div>
+    </nav>
+    <button id="btn__volver" class="boton">Volver</button>
+    <div class="contenedor">
+        <button id="btn-desplegarChats" onclick="desplegarChats()" class="boton">Chats recientes</button>
+        <div class="sidebar">
+            <div class="search-bar">
+                <input type="search">
+                <input class="boton" type="button" value="Buscar">
+            </div>
+            <div class="chats" onclick="quitarNegrita()">
+                <img class="foto-chat" src="Assets\Img\cat3.jpeg" alt="">
+                <p id="noLeido" class="nombre-chat chats__nombre--bold">Juan</p>
+                <p class="fecha-chat">23.04.2023</p>
+            </div>
+            <div class="chats" onclick="quitarNegrita2()">
+                <img class="foto-chat" src="Assets\Img\cat1.jpg" alt="">
+                <p id="noLeido2" class="nombre-chat chats__nombre--bold">Sofi</p>
+                <p class="fecha-chat">23.04.2023</p>
+            </div>
+            <div class="chats">
+                <img class="foto-chat" src="Assets\Img\gato.jpg" alt="">
+                <p class="nombre-chat">Cami</p>
+                <p class="fecha-chat">23.04.2023</p>
+            </div>
+            <div class="chats">
+                <img class="foto-chat" src="Assets\Img\mi.jpg" alt="">
+                <p class="nombre-chat">Mimi</p>
+                <p class="fecha-chat">23.04.2023</p>
+            </div>
+            <div class="chats">
+                <img class="foto-chat" src="Assets\Img\gatos-negros-1.jpg" alt="">
+                <p class="nombre-chat">Benito</p>
+                <p class="fecha-chat">23.04.2023</p>
+            </div>
+            <div class="chats" id="ultimo-chat">
+                <img class="foto-chat" src="Assets\Img\cat4.jpg" alt="">
+                <p class="nombre-chat">Claudia</p>
+                <p class="fecha-chat">23.04.2023</p>
+            </div>
+        </div>
+        <div class="chat-actual">
+            <div class="header-chat">
+                <img class="foto-chat-abierto" src="Assets\Img\gato.jpg" alt="">
+                <p>Cami</p>
+            </div>
+            <div class="conversacion">
+                <div class="mensaje">
+                    <div class="div1">
+                        <img class="img-conv" src="Assets\Img\mi.jpg" alt="">
+                        <p>Mimi</p>
+                    </div>
+                    <div class="contenido1">
+                        <p class="msj1"> Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+                    </div>
+                    <div class="hora">
+                        <p class="hora-msj">10:25</p>
+                    </div>
+                </div>
+                <div class="mensaje2">
+                    <div class="div2">
+                        <img class="img-conv" src="Assets\Img\gato.jpg" alt="">
+                        <p>Cami</p>
+                    </div>
+                    <div class="contenido2">
+                        <p class="msj2">Lorem ipsum dolor libero quod rerum quaerat consectetur nisi quidem?</p>
+                    </div>
+                    <div class="hora">
+                        <p class="hora-msj">10:30</p>
+                    </div>
+                </div>
+                <div class="mensaje">
+                    <div class="div1">
+                        <img class="img-conv" src="Assets\Img\mi.jpg" alt="">
+                        <p>Mimi</p>
+                    </div>
+                    <div class="contenido1">
+                        <p class="msj1">Lorem ipsum nisi quidem?</p>
+                    </div>
+                    <div class="hora">
+                        <p class="hora-msj">11:00</p>
+                    </div>
+                </div>
+                <div class="mensaje2">
+                    <div class="div2">
+                        <img class="img-conv" src="Assets\Img\gato.jpg" alt="">
+                        <p>Cami</p>
+                    </div>
+                    <div class="contenido2">
+                        <p class="msj2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit</p>
+                    </div>
+                    <div class="hora">
+                        <p class="hora-msj">12:00</p>
+                    </div>
+                </div>
+                <div class="mensaje">
+                    <div class="div1">
+                        <img class="img-conv" src="Assets\Img\mi.jpg" alt="">
+                        <p>Mimi</p>
+                    </div>
+                    <div class="contenido1">
+                        <p class="msj1">Lorem ipsum cupiditate esse autem labore accusamus!</p>
+                    </div>
+                    <div class="hora">
+                        <p class="hora-msj">12:30</p>
+                    </div>
+                </div>
+            </div>
+            <div class="escribir">
+                <input class="texto" type="text" placeholder="Escribe tu mensaje...">
+                <div>
+                    <div class="dropup">
+                        <button class="boton">Adjuntar</button>
+                        <div class="dropup-content">
+                            <a href="#">Audio</a>
+                            <a href="#">Video</a>
+                            <a href="#">Imágen</a>
+                            <a href="#">Documento</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="boton">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="Assets\JS\script.js"></script>
+</body>
+</html>
